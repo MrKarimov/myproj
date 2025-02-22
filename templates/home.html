@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Home</title>
+        
+    </head>
+    <body>
+        <h1>Home</h1>
+        <p>Welcome to the home page!</p>
+        
+        {% for course in courses%}
+        <h1>{{ course.category}}</h1>
+            <h2>{{ course.title}}</h2>
+            <p>{{ course.description }}</p>
+        {% endfor %}
+    </body>
+    
+</html>
