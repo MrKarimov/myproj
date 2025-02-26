@@ -3,14 +3,6 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    {%if user.is_authenticated%}
-        <h1>Welcome, {{user.username}}</h1>
-        <p>Click <a href="{% url 'logout' %}">here</a> to logout.</p>
-    {%else%}
-        <h1>Welcome to CodeUz</h1>
-        <p>CodeUz is a platform for learning programming languages.</p>
-        <p>Click <a href="{% url 'login' %}">here</a> to login.</p>
-    {%endif%}
-    <h1>Welcome to CodeUz</h1>
-    <p>CodeUz is a platform for learning programming languages.</p>
+    <h1>Home</h1>
+    <p>Welcome to the home page!</p>
 {% endblock %}

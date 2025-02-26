@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'category',
     'lessons',
     'enrollment',
+    "crispy_forms", 
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -75,7 +77,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
