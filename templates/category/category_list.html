@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Category | CodeUz{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1 class="mb-4">Category</h1>
+        <div class="row">
+            {% for cat in categories %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ cat.image.url }}" class="card-img-top" alt="{{ cat.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title
+                        ">{{ cat.name }}</h5>
+                        <p class="card-text">{{ cat.description }}</p>
+                        <a href="" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Search</h5>
+                <form method="GET">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search..." name="q">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
